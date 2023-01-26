@@ -3,10 +3,11 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { AppointmentModule } from './appointment/appointment/appointment.module';
-import { DoctorModule } from './doctor/doctor/doctor.module';
+import { DoctorModule } from './doctor/doctor.module';
 import { PatientModule } from './patient/patient/patient.module';
 import { RoomModule } from './room/room/room.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { RouterModule, Routes } from '@angular/router';
 
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -24,6 +25,7 @@ import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatMenuModule } from '@angular/material/menu';
+import { AppRoutingModule } from './app-routing.module';
 
 
 @NgModule({
@@ -36,7 +38,9 @@ import { MatMenuModule } from '@angular/material/menu';
     RoomModule,
     PatientModule,
     AppointmentModule,
+    AppRoutingModule,
     BrowserAnimationsModule,
+    RouterModule.forRoot([]),
     MatSlideToggleModule,
     BrowserModule,
     BrowserAnimationsModule,
