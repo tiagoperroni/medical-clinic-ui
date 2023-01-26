@@ -1,11 +1,5 @@
 <div class="create">
-  <h1>AGENDAR CONSULTA</h1>
-  <button mat-stroked-button color="primary" routerLink="/appointment/save">Registrar Nova Consulta</button>
-</div>
-
-<div class="back">
-  <button mat-stroked-button color="accent" routerLink="/">Voltar</button>
-</div>
+  <h1>CONSULTAS AGENDADAS</h1>
 
 <div class="container">
   <table mat-table [dataSource]="dataSource">
@@ -36,21 +30,8 @@
     </ng-container>
 
     <ng-container matColumnDef="date">
-      <th mat-header-cell *matHeaderCellDef> Data/Time </th>
+      <th mat-header-cell *matHeaderCellDef> Data/Horário </th>
       <td mat-cell *matCellDef="let element"> {{element.date | date: 'dd/MM/yyyy HH:mm' }} </td>
-    </ng-container>
-
-
-    <ng-container matColumnDef="action">
-      <th mat-header-cell *matHeaderCellDef> Ações </th>
-      <td mat-cell *matCellDef="let element">
-        <a routerLink="/appointment/update/{{element.id}}">
-          <i id="edit" class="material-icons">edit</i>
-        </a>
-        <a routerLink="/appointment/delete/{{element.id}}">
-          <i id="delete" class="material-icons" >delete</i>
-        </a>
-      </td>
     </ng-container>
 
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>

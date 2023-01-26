@@ -1,5 +1,5 @@
 export class Appointment {
-  doctorId!: number;
+  id!: number;
   doctorName!: string;
   doctorCRM!: string;
   patientName!: string;

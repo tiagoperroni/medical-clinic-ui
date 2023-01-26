@@ -1,19 +1,19 @@
-import { AfterViewInit, Component, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
-import { AppointmentService } from '../appointment.service';
-import { Appointment } from '../model/appointment.model';
+import { AppointmentService } from 'src/app/appointment/appointment.service';
+import { Appointment } from 'src/app/appointment/model/appointment.model';
 
 @Component({
-  selector: 'app-appointment-view',
-  templateUrl: './appointment-view.component.html',
-  styleUrls: ['./appointment-view.component.css']
+  selector: 'app-home-view',
+  templateUrl: './home-view.component.html',
+  styleUrls: ['./home-view.component.css']
 })
-export class AppointmentViewComponent implements AfterViewInit {
+export class HomeViewComponent implements AfterViewInit {
 
   appointments: Appointment[] = [];
 
-  displayedColumns: string[] = ['id', 'doctor', 'doctorCrm',  'patient', 'roomNumber', 'date', 'action'];
+  displayedColumns: string[] = ['id', 'doctor', 'doctorCrm',  'patient', 'roomNumber', 'date'];
   dataSource = new MatTableDataSource<Appointment>(this.appointments);
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
@@ -26,10 +26,11 @@ export class AppointmentViewComponent implements AfterViewInit {
 
   getAll(): void {
       this.service.getAll().subscribe((res: Appointment[]) => {
-        
+
       this.appointments = res;
       this.dataSource = new MatTableDataSource<Appointment>(this.appointments);
       this.dataSource.paginator = this.paginator;
     });
   }
+
 }

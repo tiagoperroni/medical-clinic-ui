@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import * as moment from 'moment';
 import { DoctorService } from 'src/app/doctor/doctor.service';
 import { Doctor } from 'src/app/doctor/model/doctor.model';
@@ -33,7 +34,8 @@ export class AppointmentSaveComponent implements OnInit {
     private appointmentService: AppointmentService,
     private doctorService: DoctorService,
     private patientService: PatientService,
-    private roomService: RoomService
+    private roomService: RoomService,
+    private route: Router
   ) { }
 
   ngOnInit(): void {
@@ -74,13 +76,12 @@ export class AppointmentSaveComponent implements OnInit {
       this.appointmentDTO.appointmentDate = dataString;
 
     this.appointmentService.save(this.appointmentDTO).subscribe((res) => {
-      console.log(res);
+      this.route.navigate(['/appointment']);
+      this.appointmentService.message('A consulta foi agendada com sucesso.');
     }, err => {
       console.log(err);
     });
     }
-
-
   }
 
   verifyData(): boolean {

@@ -28,13 +28,15 @@ import { MatMenuModule } from '@angular/material/menu';
 import { AppRoutingModule } from './app-routing.module';
 import { RoomSaveComponent } from './room/room-save/room-save.component';
 import { RoomViewComponent } from './room/room-view/room-view.component';
+import { HomeViewComponent } from './home/home-view/home-view.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     RoomSaveComponent,
-    RoomViewComponent
+    RoomViewComponent,
+    HomeViewComponent
   ],
   imports: [
     BrowserModule,

@@ -1,1 +1,32 @@
-<p>appointment-delete works!</p>
+<form class="form">
+  <h1>Deletar Técnico</h1>
+
+  <mat-form-field class="full-width" appearance="fill">
+    <mat-label>Doutor</mat-label>
+    <input [(ngModel)]="appointment.doctorName" name="doctorName" disabled matInput>
+  </mat-form-field>
+
+  <mat-form-field class="full-width" appearance="fill">
+    <mat-label>CRM</mat-label>
+    <input [(ngModel)]="appointment.doctorCRM" name="doctorCRM" disabled matInput>
+  </mat-form-field>
+
+  <mat-form-field class="full-width" appearance="fill">
+    <mat-label>Paciente</mat-label>
+    <input [(ngModel)]="appointment.patientName" name="patientName" disabled matInput>
+  </mat-form-field>
+
+  <mat-form-field class="full-width" appearance="fill">
+    <mat-label>Sala</mat-label>
+    <input [(ngModel)]="appointment.roomNumber" name="roomNumber" disabled matInput>
+  </mat-form-field>
+
+  <mat-form-field class="full-width" appearance="fill">
+    <mat-label>Data da Consulta</mat-label>
+    <input [(ngModel)]="appointment.date" name="date" disabled matInput>
+  </mat-form-field>
+
+  <button mat-flat-button color="primary" (click)="delete()">Deletar</button>
+  <button mat-flat-button color="warn" routerLink="/appointment">Cancelar</button>
+
+</form>
