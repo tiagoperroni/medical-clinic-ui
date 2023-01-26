@@ -1,6 +1,6 @@
-export interface Doctor {
-  id: number;
-  name: string;
-  crm: string;
-  registerDate: Date;
+export class Doctor {
+  id!: number;
+  name!: string;
+  crm!: string;
+  registerDate!: Date;
 }

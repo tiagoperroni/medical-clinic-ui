@@ -1,0 +1,17 @@
+<form class="form">
+  <h1>Salvar Novo Técnico</h1>
+  <mat-form-field class="full-width" appearance="fill">
+    <mat-label>Nome</mat-label>
+    <input [(ngModel)]="doctor.name" name="name" matInput placeholder="Ex. Maria Silva">
+  </mat-form-field>
+
+  <mat-form-field class="full-width" appearance="fill">
+    <mat-label>CRM</mat-label>
+    <input [(ngModel)]="doctor.crm" name="crm" matInput placeholder="Ex. crm1234">
+  </mat-form-field>
+
+  <button mat-stroked-button color="primary" (click)="save()">Salvar</button>
+  <button mat-stroked-button color="accent" routerLink="/doctor">Cancelar</button>
+
+
+</form>

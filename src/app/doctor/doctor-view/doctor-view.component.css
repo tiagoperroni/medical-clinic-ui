@@ -1,3 +1,25 @@
+.create, .back {
+  width: 90%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.create h1 {
+  text-align: center;
+  font-size: 2rem;
+}
+
+.create button {
+  width: 100%;
+  margin: 0.2rem;
+}
+
+.back button {
+  width: 100%;
+  margin: 0.2rem;
+  margin-bottom: 1rem;
+}
+
 .container {
   width: 90%;
   margin-right: auto;

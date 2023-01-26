@@ -13,7 +13,7 @@ export class DoctorViewComponent implements AfterViewInit {
 
   doctors: Doctor[] = [];
 
-  displayedColumns: string[] = ['id', 'name', 'crm', 'registerDate'];
+  displayedColumns: string[] = ['id', 'name', 'crm', 'registerDate', 'action'];
   dataSource = new MatTableDataSource<Doctor>(this.doctors);
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;

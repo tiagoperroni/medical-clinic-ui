@@ -1,4 +1,13 @@
-<div class="mat-elevation-z8 container">
+<div class="create">
+  <h1>DOUTORES</h1>
+  <button mat-stroked-button color="primary" routerLink="/doctor/save">Cadastrar Novo Doutor</button>
+</div>
+
+<div class="back">
+  <button mat-stroked-button color="accent" routerLink="/">Voltar</button>
+</div>
+
+<div class="container">
   <table mat-table [dataSource]="dataSource">
 
     <ng-container matColumnDef="id">
