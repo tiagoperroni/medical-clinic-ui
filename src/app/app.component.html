@@ -1,1 +1,40 @@
-<mat-slide-toggle>Toggle me!</mat-slide-toggle>
+<mat-toolbar class="header mat-elevation-z1">
+  <h1>Clínica Médica</h1>
+</mat-toolbar>
+
+<mat-drawer-container class="container" autosize>
+  <mat-drawer #drawer class="sidenav" mode="side">
+    <mat-nav-list class="nav-list">
+      <a mat-list-item routerLink="/">
+        <i class="material-icons">home</i>Home
+      </a>
+
+      <a mat-list-item routerLink="/">
+        <i class="material-icons">people</i>Doutores
+      </a>
+
+      <a mat-list-item routerLink="/">
+        <i class="material-icons">people_outline</i>Pacientes
+      </a>
+
+      <a mat-list-item routerLink="/">
+        <i class="material-icons">airline_seat_recline_extra</i>Salas
+      </a>
+
+      <a mat-list-item routerLink="/">
+        <i class="material-icons">event_available</i>Consultas
+      </a>
+    </mat-nav-list>
+  </mat-drawer>
+
+  <div class="sidenav-content">
+    <button type="button" mat-icon-button (click)="drawer.toggle()">
+      <mat-icon>more_vert</mat-icon>
+    </button>
+  </div>
+</mat-drawer-container>
+
+
+<mat-toolbar class="footer">
+  <p>Contato: (44) 98995-4545</p>
+</mat-toolbar>
