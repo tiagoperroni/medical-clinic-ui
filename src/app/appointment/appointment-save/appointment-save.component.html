@@ -1,0 +1,46 @@
+<div class="container">
+  <div class="labels">
+
+    <h1>Salvar Nova Consulta</h1>
+    <mat-form-field appearance="fill">
+      <mat-label>Selecione o médico</mat-label>
+      <mat-select [(value)]="selectedDoctor">
+        <mat-option *ngFor="let doctor of doctors" value="{{doctor.id}}">{{ doctor.name }}</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Selecione o Paciente</mat-label>
+      <mat-select [(value)]="selectedPatient">
+        <mat-option *ngFor="let patient of patients" value="{{patient.id}}">{{ patient.name }}</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Selecione a Sala</mat-label>
+      <mat-select [(value)]="selectedRoom">
+        <mat-option *ngFor="let room of rooms" value="{{room.id}}">{{ room.roomNumber }}</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field class="date" appearance="fill">
+      <mat-label>Selecione da Data</mat-label>
+      <input matInput [matDatepicker]="picker" [(ngModel)]="selectedDate" name="selectedDate">
+      <mat-hint>MM/DD/YYYY</mat-hint>
+      <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker touchUi #picker></mat-datepicker>
+    </mat-form-field>
+
+    <mat-form-field class="time" appearance="fill">
+      <mat-label>Selecione o Horário</mat-label>
+      <input matInput type="time"  [(ngModel)]="selectedTime" name="selectedTime" #time>
+      <mat-hint>HH:MM</mat-hint>
+    </mat-form-field>
+
+    <button class="salvarbtn" mat-flat-button color="primary" (click)="save()">Salvar</button>
+    <button mat-flat-button color="warn" routerLink="/appointment">Cancelar</button>
+
+
+  </div>
+
+</div>

@@ -1,0 +1,30 @@
+.container {
+  width: 30%;
+  margin: auto;
+}
+
+.labels {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+
+h1 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.time {
+  margin-top: 15px;
+}
+
+button {
+  width: 100%;
+  margin-bottom: 0.5rem;
+}
+
+.salvarbtn {
+  margin-top: 15px;
+}

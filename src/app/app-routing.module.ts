@@ -1,5 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AppointmentDeleteComponent } from './appointment/appointment-delete/appointment-delete.component';
+import { AppointmentSaveComponent } from './appointment/appointment-save/appointment-save.component';
+import { AppointmentUpdateComponent } from './appointment/appointment-update/appointment-update.component';
+import { AppointmentViewComponent } from './appointment/appointment-view/appointment-view.component';
 import { DoctorDeleteComponent } from './doctor/doctor-delete/doctor-delete.component';
 import { DoctorSaveComponent } from './doctor/doctor-save/doctor-save.component';
 import { DoctorUpdateComponent } from './doctor/doctor-update/doctor-update.component';
@@ -29,6 +33,11 @@ const routes: Routes = [
   { path: 'patient/save', component: PatientSaveComponent },
   { path: 'patient/update/:id', component: PatientUpdateComponent },
   { path: 'patient/delete/:id', component: PatientDeleteComponent },
+
+  { path: 'appointment', component: AppointmentViewComponent },
+  { path: 'appointment/save', component: AppointmentSaveComponent },
+  { path: 'appointment/update/:id', component: AppointmentUpdateComponent },
+  { path: 'appointment/delete/:id', component: AppointmentDeleteComponent },
 
 ];
 

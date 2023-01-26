@@ -20,7 +20,6 @@ export class DoctorViewComponent implements AfterViewInit {
 
   constructor(private service: DoctorService) {}
 
-
   ngAfterViewInit() {
     this.getAll();
   }
