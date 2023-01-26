@@ -1,0 +1,22 @@
+<form class="form">
+  <h1>Cadastrar Novo Paciente</h1>
+  <mat-form-field class="full-width" appearance="fill">
+    <mat-label>Nome</mat-label>
+    <input [(ngModel)]="patient.name" name="name" matInput placeholder="Ex. Maria Silva">
+  </mat-form-field>
+
+  <mat-form-field class="full-width" appearance="fill">
+    <mat-label>CPF</mat-label>
+    <input [(ngModel)]="patient.cpf" name="cpf" matInput placeholder="Ex. 056.896.546-59">
+  </mat-form-field>
+
+  <mat-form-field class="full-width" appearance="fill">
+    <mat-label>Idade</mat-label>
+    <input type="number" [(ngModel)]="patient.age" name="age" matInput placeholder="Ex. 32">
+  </mat-form-field>
+
+  <button mat-flat-button color="primary" (click)="save()">Salvar</button>
+  <button mat-flat-button color="warn" routerLink="/patient">Cancelar</button>
+
+
+</form>

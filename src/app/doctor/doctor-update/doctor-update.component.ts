@@ -28,7 +28,6 @@ export class DoctorUpdateComponent implements OnInit {
     }, err => {
       this.service.message(err);
     });
-
   }
 
   update(): void {
@@ -46,13 +45,10 @@ export class DoctorUpdateComponent implements OnInit {
 
   private verifyData(doctor: Doctor): boolean {
     if (doctor.name === null || doctor.name === '' || doctor.crm === null || doctor.crm === '') {
-      this.service.message('Verifique se todos os campos foram inbformados.');
+      this.service.message('Verifique se todos os campos foram informados.');
       return false;
     }
     return true;
-
   }
-
-
 
 }

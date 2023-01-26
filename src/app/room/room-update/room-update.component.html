@@ -1,0 +1,12 @@
+<form class="form">
+  <h1>Atualizar Sala</h1>
+  <mat-form-field class="full-width" appearance="fill">
+    <mat-label>Nome</mat-label>
+    <input [(ngModel)]="room.roomNumber" name="roomNumber" matInput placeholder="Ex. Maria Silva">
+  </mat-form-field>
+
+  <button mat-flat-button color="primary" (click)="update()">Salvar</button>
+  <button mat-flat-button color="warn" routerLink="/doctor">Cancelar</button>
+
+
+</form>

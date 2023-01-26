@@ -2,10 +2,10 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
-import { AppointmentModule } from './appointment/appointment/appointment.module';
+import { AppointmentModule } from './appointment/appointment.module';
 import { DoctorModule } from './doctor/doctor.module';
-import { PatientModule } from './patient/patient/patient.module';
-import { RoomModule } from './room/room/room.module';
+import { PatientModule } from './patient/patient.module';
+import { RoomModule } from './room/room.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule, Routes } from '@angular/router';
 
@@ -26,11 +26,15 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatMenuModule } from '@angular/material/menu';
 import { AppRoutingModule } from './app-routing.module';
+import { RoomSaveComponent } from './room/room-save/room-save.component';
+import { RoomViewComponent } from './room/room-view/room-view.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    RoomSaveComponent,
+    RoomViewComponent
   ],
   imports: [
     BrowserModule,

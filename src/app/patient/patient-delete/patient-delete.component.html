@@ -1,0 +1,32 @@
+<form class="form">
+  <h1>Deletar Técnico</h1>
+
+  <mat-form-field class="full-width" appearance="fill">
+    <mat-label>ID</mat-label>
+    <input [(ngModel)]="patient.id" name="id" disabled matInput>
+  </mat-form-field>
+
+  <mat-form-field class="full-width" appearance="fill">
+    <mat-label>Nome</mat-label>
+    <input [(ngModel)]="patient.name" name="name" disabled matInput>
+  </mat-form-field>
+
+  <mat-form-field class="full-width" appearance="fill">
+    <mat-label>CPF</mat-label>
+    <input [(ngModel)]="patient.cpf" name="cpf" disabled matInput>
+  </mat-form-field>
+
+  <mat-form-field class="full-width" appearance="fill">
+    <mat-label>Idade</mat-label>
+    <input [(ngModel)]="patient.age" name="age" disabled matInput>
+  </mat-form-field>
+
+  <mat-form-field class="full-width" appearance="fill">
+    <mat-label>Data de Cadastro</mat-label>
+    <input [(ngModel)]="patient.registerDate" name="registerDate" disabled matInput>
+  </mat-form-field>
+
+  <button mat-flat-button color="primary" (click)="delete()">Deletar</button>
+  <button mat-flat-button color="warn" routerLink="/patient">Cancelar</button>
+
+</form>

@@ -1,24 +1,18 @@
 <form class="form">
-  <h1>Deletar Técnico</h1>
-
+  <h1>Deletar Sala</h1>
   <mat-form-field class="full-width" appearance="fill">
     <mat-label>ID</mat-label>
-    <input [(ngModel)]="doctor.id" name="id" disabled matInput>
-  </mat-form-field>
-
-  <mat-form-field class="full-width" appearance="fill">
-    <mat-label>Nome</mat-label>
-    <input [(ngModel)]="doctor.name" name="name" disabled matInput>
+    <input [(ngModel)]="room.id" name="id" disabled matInput>
   </mat-form-field>
 
   <mat-form-field class="full-width" appearance="fill">
     <mat-label>CRM</mat-label>
-    <input [(ngModel)]="doctor.crm" name="crm" disabled matInput>
+    <input [(ngModel)]="room.roomNumber" name="roomNumber" disabled matInput>
   </mat-form-field>
 
   <mat-form-field class="full-width" appearance="fill">
-    <mat-label>Data de Cadastro</mat-label>
-    <input [(ngModel)]="doctor.registerDate" name="registerDate" disabled matInput>
+    <mat-label>CRM</mat-label>
+    <input [(ngModel)]="room.registerDate" name="registerDate" disabled matInput>
   </mat-form-field>
 
   <button mat-flat-button color="primary" (click)="delete()">Deletar</button>
