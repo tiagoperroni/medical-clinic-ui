@@ -1,5 +1,5 @@
 <form class="form">
-  <h1>Salvar Novo Técnico</h1>
+  <h1>Atualizar Técnico</h1>
   <mat-form-field class="full-width" appearance="fill">
     <mat-label>Nome</mat-label>
     <input [(ngModel)]="doctor.name" name="name" matInput placeholder="Ex. Maria Silva">
@@ -10,7 +10,7 @@
     <input [(ngModel)]="doctor.crm" name="crm" matInput placeholder="Ex. crm1234">
   </mat-form-field>
 
-  <button mat-flat-button color="primary" (click)="save()">Salvar</button>
+  <button mat-flat-button color="primary" (click)="update()">Salvar</button>
   <button mat-flat-button color="warn" routerLink="/doctor">Cancelar</button>
 
 

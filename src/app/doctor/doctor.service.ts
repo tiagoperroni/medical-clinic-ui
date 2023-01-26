@@ -18,8 +18,20 @@ export class DoctorService {
     return this.http.get<Doctor[]>(this.baseUrl);
   }
 
+  public getById(id: number): Observable<Doctor> {
+    return this.http.get<Doctor>(`${this.baseUrl}/${id}`);
+  }
+
   public save(doctor: Doctor): Observable<Doctor> {
     return this.http.post<Doctor>(this.baseUrl, doctor);
+  }
+
+  public update(id: number, doctor: Doctor): Observable<Doctor> {
+    return this.http.put<Doctor>(`${this.baseUrl}/${id}`, doctor);
+  }
+
+  public delete(id: number): Observable<any> {
+    return this.http.delete<any>(`${this.baseUrl}/${id}`);
   }
 
   message(msg: string): void {

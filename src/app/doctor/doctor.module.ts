@@ -12,11 +12,15 @@ import { MatButtonModule } from '@angular/material/button';
 import {MatInputModule} from '@angular/material/input';
 
 import { DoctorSaveComponent } from './doctor-save/doctor-save.component';
+import { DoctorUpdateComponent } from './doctor-update/doctor-update.component';
+import { DoctorDeleteComponent } from './doctor-delete/doctor-delete.component';
 
 @NgModule({
   declarations: [
     DoctorViewComponent,
-    DoctorSaveComponent
+    DoctorSaveComponent,
+    DoctorUpdateComponent,
+    DoctorDeleteComponent
   ],
   imports: [
     CommonModule,
